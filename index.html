@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://use.fontawesome.com/d124904518.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Source+Sans+Pro:400,700,900&amp;subset=cyrillic"
+          rel="stylesheet"-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>CV</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="navbar-brand mb-0 h1">
+            <div class="photo text-center align-middle">
+                <p class="mb-0 ml-1 mr-1 photo-msg">Кликните здесь для выбора фото или перетащите его сюда</p>
+                <input type="file" class="tiny">
+            </div>
+            <div class="btn-group d-flex justify-content-center">
+                <i class="fa fa-camera m-1 text-muted"></i>
+                <i class="fa fa-trash m-1 text-muted invisible"></i>
+                <i class="fa fa-pencil m-1 text-muted invisible"></i>
+            </div>
+        </div>
+    </nav>
+    <canvas id="canvas" class="bg-light"></canvas>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
