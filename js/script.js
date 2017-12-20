@@ -35,6 +35,10 @@ class Rectangle {
         this.x = x - this.deltaX;
         this.y = y - this.deltaY;
     }
+    setDelta(x, y){
+        this.deltaX = x - this.x;
+        this.deltaY = y - this.y;
+    }
 
     cursorStyle(style) {
         const cursor = {
@@ -113,23 +117,24 @@ function stopRect() {
 
 function moveRect(e) {
     rect.toMove = true;
+    rect.setDelta(e.offsetX, e.offsetY);
 }
 
 function changeCursor(e) {
     let cursor = {x: e.offsetX, y: e.offsetY};
     let corner = rect.isCorner(cursor.x, cursor.y);
     if (corner) {
+        console.log('corner');
         canvas.style.cursor = rect.cursorStyle(corner);
         if (rect.toMove) {
             rect.resize(cursor.x, cursor.y);
-            return;
         }
+        return;
     }
-    //console.log('inside', isCursorInside(rect, cursor));
     if (isCursorInside(rect, cursor)) {
+        canvas.style.cursor = 'move';
         if (!rect.inside) {
             rect.inside = true;
-            canvas.style.cursor = 'move';
         }
         else {
             if (rect.toMove) {
@@ -156,7 +161,6 @@ function isCursorInside(rect, cursor) {
     }
     return false;
 }
-
 
 function dropImg(e) {
     alert('prevented');
