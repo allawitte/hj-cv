@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://use.fontawesome.com/d124904518.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Source+Sans+Pro:400,700,900&amp;subset=cyrillic"
+          rel="stylesheet"-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>CV</title>
+</head>
+<body>
+<div class="container">
+    <section id="photo-block">
+        <nav class="navbar navbar-light bg-light">
+            <div class="navbar-brand mb-0 h1 photo-container">
+                <div class="photo text-center align-middle">
+                </div>
+                <div id="error-message"></div>
+                <div class="btn-group justify-content-center radio">
+                    <label for="pc"><input type="radio" name="photo" id="pc" value="1" >фото с компьютера</label>
+                    <label for="moment"><input type="radio" name="photo" id="moment" value="2">сделать моментальное фото</label>
+                </div>
+                <div class="btn-group justify-content-center buttons d-none">
+                    <i class="fa fa-trash m-1 text-muted"></i>
+                    <i class="fa fa-pencil m-1 text-muted"></i>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="personal-data">
+    </section>
+    <section id="chatHR">
+        <h3>Чат с HR</h3>
+        <form class="form-inline">
+
+            <div id="welcome" class="form-group mx-sm-3 mb-2">
+                <label for="name">Как вас зовут?</label>
+                <input type="text" id="name"  placeholder="Введите ваше имя">
+                <input type="button" value="Join Chat" id="nameSend">
+            </div>
+            <div id="chat" class="form-group mx-sm-3 mb-2 d-none">
+                <div id="chatBox">
+
+                </div>
+                <div id="messageForm">
+                    <input type="text" id="message">
+                    <input type="button" value="send" id="msgSend"">
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+</div>
+<script  src="js/script.js"></script>
+<script  src="js/modules/rectangle.js"></script>
+<script  src="js/modules/photo.js"></script>
+<script  src="js/websocket.js"></script>
+</body>
+</html>
